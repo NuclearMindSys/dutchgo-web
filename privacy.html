@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="main-html">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="page-title">سياسة الخصوصية — DutchaWay داتش أواي</title>
+  <meta name="description" content="سياسة الخصوصية الرسمية لتطبيق DutchaWay (داتش أواي / Dutch Viewer) لتعلم اللغة الهولندية — خصوصية دراستك وأمان بياناتك الصوتية أولويتنا.">
+  <link rel="icon" type="image/svg+xml" href="logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #EA580C;
+      --primary-dark: #9A3412;
+      --primary-light: #F97316;
+      --accent-blue: #1E3A8A;
+      --accent-blue-light: #3B82F6;
+      --bg: #FFFBF7;
+      --bg-card: #FFFFFF;
+      --text: #1C1917;
+      --text-muted: #78716C;
+      --border: #E7E5E4;
+      --highlight-bg: #FFF7ED;
+      --highlight-border: #FED7AA;
+      --highlight-text: #9A3412;
+    }
+    [data-theme="dark"] {
+      --primary: #F97316;
+      --primary-dark: #EA580C;
+      --primary-light: #FB923C;
+      --accent-blue: #3B82F6;
+      --accent-blue-light: #60A5FA;
+      --bg: #0C0A09;
+      --bg-card: #1C1917;
+      --text: #F5F5F4;
+      --text-muted: #A8A29E;
+      --border: #292524;
+      --highlight-bg: #26160C;
+      --highlight-border: #7C2D12;
+      --highlight-text: #FDBA74;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease; }
+    body {
+      font-family: 'Cairo', 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.85;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    [lang="en"] body { font-family: 'Inter', 'Cairo', sans-serif; }
+    header {
+      background: linear-gradient(135deg, #9A3412 0%, #EA580C 50%, #1E3A8A 100%);
+      color: #FFFFFF;
+      padding: 44px 20px;
+      text-align: center;
+      position: relative;
+    }
+    .top-bar {
+      position: absolute;
+      top: 15px;
+      inset-inline-end: 20px;
+      display: flex;
+      gap: 10px;
+    }
+    .action-btn {
+      background: rgba(255, 255, 255, 0.16);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: #fff;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+    }
+    .action-btn:hover { background: rgba(255, 255, 255, 0.28); }
+    .back-btn { position: absolute; top: 15px; inset-inline-start: 20px; }
+    .header-logo { width: 56px; height: 56px; margin-bottom: 12px; }
+    h1 { font-size: clamp(26px, 4vw, 36px); font-weight: 800; margin-bottom: 6px; }
+    .header-sub { opacity: 0.92; font-size: 16px; }
+    main {
+      max-width: 880px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 40px 20px;
+      flex: 1;
+    }
+    .summary-card {
+      background: var(--highlight-bg);
+      border: 1px solid var(--highlight-border);
+      border-radius: 18px;
+      padding: 24px;
+      color: var(--highlight-text);
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 28px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      box-shadow: 0 4px 12px rgba(234, 88, 12, 0.08);
+    }
+    .summary-card i { font-size: 28px; margin-top: 2px; color: var(--primary); }
+    .policy-section {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 26px 30px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    }
+    .policy-section h2 {
+      font-size: 19px;
+      color: var(--primary);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+    }
+    .policy-section ul {
+      padding-inline-start: 24px;
+      color: var(--text-muted);
+    }
+    .policy-section li { margin-bottom: 9px; }
+    .policy-section p { color: var(--text-muted); margin-bottom: 8px; }
+    strong { color: var(--text); }
+    footer {
+      border-top: 1px solid var(--border);
+      background: var(--bg-card);
+      text-align: center;
+      padding: 30px 20px;
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+    footer a { color: var(--primary); text-decoration: none; font-weight: 600; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="./" class="action-btn back-btn" id="back-link">
+      <i class="fa-solid fa-arrow-right" id="back-icon"></i>
+      <span id="back-text">الرئيسية</span>
+    </a>
+    <div class="top-bar">
+      <button class="action-btn" id="lang-btn" onclick="toggleLanguage()">
+        <i class="fa-solid fa-globe"></i>
+        <span id="lang-text">English</span>
+      </button>
+      <button class="action-btn" id="theme-btn" onclick="toggleTheme()">
+        <i class="fa-solid fa-moon" id="theme-icon"></i>
+      </button>
+    </div>
+    <img src="logo.svg" alt="DutchaWay Logo" class="header-logo">
+    <h1 id="hdr-title">سياسة الخصوصية وأمان بيانات المتعلم</h1>
+    <p class="header-sub" id="hdr-sub">DutchaWay (داتش أواي) — تطبيق تعلم اللغة الهولندية الشامل</p>
+  </header>
+
+  <main>
+    <div class="summary-card">
+      <i class="fa-solid fa-language"></i>
+      <div>
+        <div style="font-size: 17px; font-weight: 800; margin-bottom: 4px;" id="sum-title">تعهد خصوصية المتعلم الشفاف</div>
+        <p id="sum-desc">تطبيق DutchaWay مصمم ليوفر لك رحلة تعلم هادئة وآمنة بدون أي إعلانات أو برمجيات تتبع: تقدمك في المفردات، وتسجيلات نطقك الصوتي، وسلاسل دراستك اليومية تبقى على جهازك بنسبة 100%، والمزامنة السحابية اختيارية بحساب Google موحد ومحمي بعزل صارم للسجلات.</p>
+      </div>
+    </div>
+
+    <div class="policy-section">
+      <h2 id="sec1-title"><i class="fa-solid fa-compass"></i> 1. من نحن وهوية التطبيق</h2>
+      <p id="sec1-desc">DutchaWay (داتش أواي / Dutch Viewer) تطبيق تعليمي متكامل لتعلم اللغة الهولندية للناطقين بالعربية والإنجليزية، تطوره وتشغله منظومة NuclearMindSys. يهدف التطبيق إلى تمكين المتعلمين من إتقان المفردات والقواعد ومحاكاة النطق الأصيل دون الحاجة إلى إنترنت مستمر.</p>
+    </div>
+
+    <div class="policy-section">
+      <h2 id="sec2-title"><i class="fa-solid fa-mobile-screen-button"></i> 2. التخزين المحلي والعمل دون إنترنت (Offline-First)</h2>
+      <ul id="sec2-list">
+        <li><strong>محتوى كامل دون إنترنت:</strong> كافة الكلمات (1000+)، والعبارات (1500+)، والمحادثات، والتسجيلات الصوتية مضمنة محلياً داخل التطبيق في قاعدة بيانات SQLite.</li>
+        <li><strong>بيانات التعلم على جهازك:</strong> بطاقات التكرار المتباعد (SM-2)، ونقاط الخبرة (XP)، وسلاسل الأيام (Streaks)، وملاحظات الأخطاء تُخزن محلياً على جهازك ولا تُشارك مع أي جهة إعلانية أو تجارية.</li>
+        <li><strong>انعدام الإعلانات والتعقب:</strong> التطبيق خالٍ تماماً من أي حزم إعلانية (AdMob وغيرها) أو شبكات تتبع سلوكي.</li>
+      </ul>
+    </div>
+
+    <div class="policy-section">
+      <h2 id="sec3-title"><i class="fa-solid fa-cloud-arrow-up"></i> 3. المزامنة السحابية الاختيارية (Cloud Sync)</h2>
+      <ul id="sec3-list">
+        <li><strong>اختيارية بالكامل:</strong> يمكنك استخدام كامل التطبيق دون أي تسجيل دخول. تسجيل الدخول عبر Google OAuth مطلوب فقط إذا أردت مزامنة تقدمك بين هاتفك وحاسوبك.</li>
+        <li><strong>أمان عزل السجلات (Row-Level Security):</strong> تُخزن السجلات المتزامنة في بيئة سحابية آمنة على Supabase بتشفير HTTPS وسياسات RLS صارمة تمنع أي مستخدم آخر من الوصول لسجلات دراستك.</li>
+        <li><strong>التحكم الكامل:</strong> يمكنك تسجيل الخروج أو مسح السجلات السحابية في أي وقت مع بقاء تقدمك المحلي محفوظاً بالكامل.</li>
+      </ul>
+    </div>
+
+    <div class="policy-section">
+      <h2 id="sec4-title"><i class="fa-solid fa-microphone"></i> 4. الميكروفون وتدريب النطق (Shadowing)</h2>
+      <p id="sec4-desc">في وضع تدريب النطق ومحاكاة الصوت الأصيل (Shadowing / Speech Recording)، يُستخدم إذن الميكروفون حصراً لتسجيل صوتك محلياً على جهازك لتمكينك من مقارنته بالصوت الهولندي الأصيل. لا يتم رفع تسجيلاتك الصوتية إلى أي خوادم خارجية إطلاقاً، وتُحذف التسجيلات المؤقتة تلقائياً.</p>
+    </div>
+
+    <div class="policy-section">
+      <h2 id="sec5-title"><i class="fa-solid fa-list-check"></i> 5. الأذونات المطلوبة ومبرراتها</h2>
+      <ul id="sec5-list">
+        <li><strong>الميكروفون:</strong> لتدريب النطق ومحاكاة المحادثات (محلياً فقط).</li>
+        <li><strong>التخزين / الملفات:</strong> لحفظ واستعادة ملفات النسخ الاحتياطي لقاعدة بيانات تقدمك.</li>
+        <li><strong>الإنترنت:</strong> يُستخدم حصراً في حال رغبتك في المزامنة السحابية وفحص التحديثات البرمجية.</li>
+        <li><strong>الإشعارات:</strong> لإرسال إشعار "القطرة اليومية" لتحفيز المذاكرة اليومية (يمكن تعطيلها بسهولة من الإعدادات).</li>
+      </ul>
+    </div>
+
+    <div class="policy-section">
+      <h2 id="sec6-title"><i class="fa-solid fa-envelope-open-text"></i> 6. التحديثات والتواصل</h2>
+      <p id="sec6-desc">قد نقوم بتحديث هذه السياسة مع إضافة ميزات تعليمية جديدة. للاستفسارات والدعم التقني، تواصل معنا عبر <a href="https://github.com/NuclearMindSys" target="_blank" rel="noopener">GitHub / NuclearMindSys</a>.</p>
+      <p><strong>تاريخ آخر تحديث:</strong> 21 سبتمبر 2026</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>DutchaWay (داتش أواي) © 2026 · تطوير وتشغيل <a href="https://github.com/NuclearMindSys" target="_blank" rel="noopener">NuclearMindSys</a></p>
+    <p style="margin-top: 6px;"><a href="./">الصفحة الرئيسية لـ DutchaWay</a> · <a href="https://github.com/NuclearMindSys/DutchaWay" target="_blank" rel="noopener">المستودع الرسمي على GitHub</a></p>
+  </footer>
+
+  <script>
+    const translations = {
+      ar: {
+        pageTitle: "سياسة الخصوصية — DutchaWay داتش أواي",
+        backText: "الرئيسية",
+        langText: "English",
+        hdrTitle: "سياسة الخصوصية وأمان بيانات المتعلم",
+        hdrSub: "DutchaWay (داتش أواي) — تطبيق تعلم اللغة الهولندية الشامل",
+        sumTitle: "تعهد خصوصية المتعلم الشفاف",
+        sumDesc: "تطبيق DutchaWay مصمم ليوفر لك رحلة تعلم هادئة وآمنة بدون أي إعلانات أو برمجيات تتبع: تقدمك في المفردات، وتسجيلات نطقك الصوتي، وسلاسل دراستك اليومية تبقى على جهازك بنسبة 100%، والمزامنة السحابية اختيارية بحساب Google موحد ومحمي بعزل صارم للسجلات.",
+        sec1Title: '<i class="fa-solid fa-compass"></i> 1. من نحن وهوية التطبيق',
+        sec1Desc: 'DutchaWay (داتش أواي / Dutch Viewer) تطبيق تعليمي متكامل لتعلم اللغة الهولندية للناطقين بالعربية والإنجليزية، تطوره وتشغله منظومة NuclearMindSys. يهدف التطبيق إلى تمكين المتعلمين من إتقان المفردات والقواعد ومحاكاة النطق الأصيل دون الحاجة إلى إنترنت مستمر.',
+        sec2Title: '<i class="fa-solid fa-mobile-screen-button"></i> 2. التخزين المحلي والعمل دون إنترنت (Offline-First)',
+        sec2List: '<li><strong>محتوى كامل دون إنترنت:</strong> كافة الكلمات (1000+)، والعبارات (1500+)، والمحادثات، والتسجيلات الصوتية مضمنة محلياً داخل التطبيق في قاعدة بيانات SQLite.</li><li><strong>بيانات التعلم على جهازك:</strong> بطاقات التكرار المتباعد (SM-2)، ونقاط الخبرة (XP)، وسلاسل الأيام (Streaks)، وملاحظات الأخطاء تُخزن محلياً على جهازك ولا تُشارك مع أي جهة إعلانية أو تجارية.</li><li><strong>انعدام الإعلانات والتعقب:</strong> التطبيق خالٍ تماماً من أي حزم إعلانية (AdMob وغيرها) أو شبكات تتبع سلوكي.</li>',
+        sec3Title: '<i class="fa-solid fa-cloud-arrow-up"></i> 3. المزامنة السحابية الاختيارية (Cloud Sync)',
+        sec3List: '<li><strong>اختيارية بالكامل:</strong> يمكنك استخدام كامل التطبيق دون أي تسجيل دخول. تسجيل الدخول عبر Google OAuth مطلوب فقط إذا أردت مزامنة تقدمك بين هاتفك وحاسوبك.</li><li><strong>أمان عزل السجلات (Row-Level Security):</strong> تُخزن السجلات المتزامنة في بيئة سحابية آمنة على Supabase بتشفير HTTPS وسياسات RLS صارمة تمنع أي مستخدم آخر من الوصول لسجلات دراستك.</li><li><strong>التحكم الكامل:</strong> يمكنك تسجيل الخروج أو مسح السجلات السحابية في أي وقت مع بقاء تقدمك المحلي محفوظاً بالكامل.</li>',
+        sec4Title: '<i class="fa-solid fa-microphone"></i> 4. الميكروفون وتدريب النطق (Shadowing)',
+        sec4Desc: 'في وضع تدريب النطق ومحاكاة الصوت الأصيل (Shadowing / Speech Recording)، يُستخدم إذن الميكروفون حصراً لتسجيل صوتك محلياً على جهازك لتمكينك من مقارنته بالصوت الهولندي الأصيل. لا يتم رفع تسجيلاتك الصوتية إلى أي خوادم خارجية إطلاقاً، وتُحذف التسجيلات المؤقتة تلقائياً.',
+        sec5Title: '<i class="fa-solid fa-list-check"></i> 5. الأذونات المطلوبة ومبرراتها',
+        sec5List: '<li><strong>الميكروفون:</strong> لتدريب النطق ومحاكاة المحادثات (محلياً فقط).</li><li><strong>التخزين / الملفات:</strong> لحفظ واستعادة ملفات النسخ الاحتياطي لقاعدة بيانات تقدمك.</li><li><strong>الإنترنت:</strong> يُستخدم حصراً في حال رغبتك في المزامنة السحابية وفحص التحديثات البرمجية.</li><li><strong>الإشعارات:</strong> لإرسال إشعار "القطرة اليومية" لتحفيز المذاكرة اليومية (يمكن تعطيلها بسهولة من الإعدادات).</li>',
+        sec6Title: '<i class="fa-solid fa-envelope-open-text"></i> 6. التحديثات والتواصل',
+        sec6Desc: 'قد نقوم بتحديث هذه السياسة مع إضافة ميزات تعليمية جديدة. للاستفسارات والدعم التقني، تواصل معنا عبر GitHub / NuclearMindSys.'
+      },
+      en: {
+        pageTitle: "Privacy Policy — DutchaWay Dutch Learning Platform",
+        backText: "Home",
+        langText: "العربية",
+        hdrTitle: "Privacy Policy & Learner Data Protection",
+        hdrSub: "DutchaWay (Dutch Viewer) — Comprehensive Dutch Learning Ecosystem",
+        sumTitle: "Transparent Learner Privacy Pledge",
+        sumDesc: "DutchaWay is built to deliver a focused, peaceful language learning journey with zero advertising and zero tracking: your vocabulary progress, pronunciation audio recordings, and daily streaks remain 100% local on your device. Cloud sync is strictly optional and safeguarded with database-level Row-Level Security.",
+        sec1Title: '<i class="fa-solid fa-compass"></i> 1. Who We Are & Application Purpose',
+        sec1Desc: 'DutchaWay (Dutch Viewer) is an offline language learning ecosystem for Arabic and English speakers mastering Dutch, developed and managed by NuclearMindSys. It enables learners to master vocabulary, grammar, and native pronunciation without requiring persistent internet.',
+        sec2Title: '<i class="fa-solid fa-mobile-screen-button"></i> 2. Offline-First Architecture & Local Storage',
+        sec2List: '<li><strong>Bundled Offline Content:</strong> All 1,000+ words, 1,500+ authentic phrases, grammar rules, and pre-recorded native audio ship directly inside the app SQLite database.</li><li><strong>Local Progress Ownership:</strong> SM-2 spaced repetition intervals, daily streaks, XP points, and mistake notebook entries remain on your device and are never shared with advertising brokers.</li><li><strong>Zero Commercial Telemetry:</strong> No ad networks, tracking scripts, or user profiling monitors.</li>',
+        sec3Title: '<i class="fa-solid fa-cloud-arrow-up"></i> 3. Optional Cloud Synchronization',
+        sec3List: '<li><strong>Opt-In Experience:</strong> Complete offline usage requires no login. Google OAuth is used solely if you opt to sync progress across multiple devices.</li><li><strong>Row-Level Security (RLS):</strong> Hosted on Supabase PostgreSQL over encrypted HTTPS, with strict RLS policies ensuring that no other user can access your study history.</li><li><strong>Revocable Anytime:</strong> Disconnecting or purging cloud records has zero impact on your complete offline local dataset.</li>',
+        sec4Title: '<i class="fa-solid fa-microphone"></i> 4. Microphone & Pronunciation Practice (Shadowing)',
+        sec4List: 'In speech shadowing and pronunciation drills, the microphone permission is used strictly to record your voice locally so you can compare it side-by-side with native Dutch audio. Audio files are never transmitted to external servers and are cleared locally upon session end.',
+        sec5Title: '<i class="fa-solid fa-list-check"></i> 5. Device Permissions & Rationale',
+        sec5List: '<li><strong>Microphone:</strong> Used locally for pronunciation comparison and shadowing drills.</li><li><strong>Storage:</strong> To save and restore offline database backup files.</li><li><strong>Internet:</strong> Used only when opting into cloud sync and checking for software releases.</li><li><strong>Notifications:</strong> For the opt-in "Daily Drop" vocabulary reminder.</li>',
+        sec6Title: '<i class="fa-solid fa-envelope-open-text"></i> 6. Updates & Inquiries',
+        sec6Desc: 'We update this policy as new educational features roll out. Contact us via GitHub / NuclearMindSys for any questions.'
+      }
+    };
+
+    let currentLang = 'ar';
+    function toggleLanguage() {
+      currentLang = currentLang === 'ar' ? 'en' : 'ar';
+      applyLanguage(currentLang);
+    }
+
+    function applyLanguage(lang) {
+      const html = document.getElementById('main-html');
+      const t = translations[lang];
+      html.setAttribute('lang', lang);
+      html.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+
+      document.getElementById('page-title').innerText = t.pageTitle;
+      document.getElementById('back-text').innerText = t.backText;
+      document.getElementById('lang-text').innerText = t.langText;
+      document.getElementById('hdr-title').innerText = t.hdrTitle;
+      document.getElementById('hdr-sub').innerText = t.hdrSub;
+      document.getElementById('sum-title').innerText = t.sumTitle;
+      document.getElementById('sum-desc').innerText = t.sumDesc;
+      document.getElementById('sec1-title').innerHTML = t.sec1Title;
+      document.getElementById('sec1-desc').innerText = t.sec1Desc;
+      document.getElementById('sec2-title').innerHTML = t.sec2Title;
+      document.getElementById('sec2-list').innerHTML = t.sec2List;
+      document.getElementById('sec3-title').innerHTML = t.sec3Title;
+      document.getElementById('sec3-list').innerHTML = t.sec3List;
+      document.getElementById('sec4-title').innerHTML = t.sec4Title;
+      document.getElementById('sec4-desc').innerText = t.sec4Desc;
+      document.getElementById('sec5-title').innerHTML = t.sec5Title;
+      document.getElementById('sec5-list').innerHTML = t.sec5List;
+      document.getElementById('sec6-title').innerHTML = t.sec6Title;
+      document.getElementById('sec6-desc').innerText = t.sec6Desc;
+
+      const backIcon = document.getElementById('back-icon');
+      if (lang === 'en') {
+        backIcon.className = 'fa-solid fa-arrow-left';
+      } else {
+        backIcon.className = 'fa-solid fa-arrow-right';
+      }
+    }
+
+    function toggleTheme() {
+      const html = document.documentElement;
+      const isDark = html.getAttribute('data-theme') === 'dark';
+      const themeIcon = document.getElementById('theme-icon');
+      if (isDark) {
+        html.removeAttribute('data-theme');
+        themeIcon.className = 'fa-solid fa-moon';
+      } else {
+        html.setAttribute('data-theme', 'dark');
+        themeIcon.className = 'fa-solid fa-sun';
+      }
+    }
+  </script>
+</body>
+</html>

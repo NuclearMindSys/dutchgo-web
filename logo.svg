@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <defs>
+    <!-- Royal Dutch Orange & Blue Gradient -->
+    <linearGradient id="dutchBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EA580C" />
+      <stop offset="45%" stop-color="#C2410C" />
+      <stop offset="100%" stop-color="#1E3A8A" />
+    </linearGradient>
+
+    <!-- Windmill Sail Accent Gradient -->
+    <linearGradient id="sailGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F1F5F9" />
+    </linearGradient>
+
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Outer Rounded Squircle -->
+  <rect x="8" y="8" width="104" height="104" rx="28" fill="url(#dutchBgGrad)" />
+  <rect x="10" y="10" width="100" height="100" rx="26" stroke="#FFFFFF" stroke-opacity="0.25" stroke-width="2" />
+
+  <!-- Dutch Tricolor Ribbon Arc at the top -->
+  <path d="M30 30 C50 20 70 20 90 30" stroke="#DC2626" stroke-width="3" stroke-linecap="round" />
+  <path d="M30 35 C50 25 70 25 90 35" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" />
+  <path d="M30 40 C50 30 70 30 90 40" stroke="#1D4ED8" stroke-width="3" stroke-linecap="round" />
+
+  <!-- Dutch Windmill Base (Tower) -->
+  <polygon points="52,88 68,88 65,58 55,58" fill="#FFFFFF" opacity="0.95" filter="url(#softGlow)" />
+  <!-- Windmill Door & Window -->
+  <rect x="58" y="74" width="4" height="14" rx="2" fill="#1E3A8A" />
+  <rect x="58" y="62" width="4" height="6" rx="1" fill="#EA580C" />
+
+  <!-- Windmill Center Rotor -->
+  <circle cx="60" cy="58" r="4.5" fill="#F59E0B" />
+
+  <!-- 4 Windmill Blades (Rotated 45 degrees) -->
+  <!-- Top-Right Blade -->
+  <path d="M60 58 L82 40 L85 45 L62 60 Z" fill="url(#sailGrad)" opacity="0.9" />
+  <line x1="60" y1="58" x2="84" y2="42" stroke="#EA580C" stroke-width="1" />
+
+  <!-- Bottom-Right Blade -->
+  <path d="M60 58 L78 80 L73 83 L58 61 Z" fill="url(#sailGrad)" opacity="0.9" />
+  <line x1="60" y1="58" x2="76" y2="82" stroke="#EA580C" stroke-width="1" />
+
+  <!-- Bottom-Left Blade -->
+  <path d="M60 58 L38 76 L35 71 L58 56 Z" fill="url(#sailGrad)" opacity="0.9" />
+  <line x1="60" y1="58" x2="36" y2="74" stroke="#EA580C" stroke-width="1" />
+
+  <!-- Top-Left Blade -->
+  <path d="M60 58 L42 36 L47 33 L62 55 Z" fill="url(#sailGrad)" opacity="0.9" />
+  <line x1="60" y1="58" x2="44" y2="34" stroke="#EA580C" stroke-width="1" />
+
+  <!-- Speech Audio Waves (Language Learning Aspect) -->
+  <path d="M88 60 C93 65 93 75 88 80" stroke="#FDE047" stroke-width="2.5" stroke-linecap="round" fill="none" />
+  <path d="M94 54 C102 63 102 77 94 86" stroke="#FDE047" stroke-width="2" stroke-linecap="round" stroke-dasharray="2 2" fill="none" />
+</svg>
